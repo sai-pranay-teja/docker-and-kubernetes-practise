@@ -1,4 +1,4 @@
-/* 
+
 
 resource "aws_spot_instance_request" "name_2" {
     ami           = "ami-0bb6af715826253bf"
@@ -28,9 +28,7 @@ provisioner "remote-exec" {
 
   inline = [
     "sudo git pull https://github.com/sai-pranay-teja/docker-and-kubernetes-practise.git",
-    "sudo labauto terraform",
     "cd docker-and-kubernetes-practise",
-    "sudo make apply",
     "sudo bash docker-and-kubernetes-practise/docker-install.sh",
     "sudo bash docker-and-kubernetes-practise/kubectl.sh",
     "sudo bash docker-and-kubernetes-practise/aws-iam-authenticator.sh"
@@ -45,4 +43,4 @@ provisioner "remote-exec" {
 
 output "public-ip"{
   value=aws_spot_instance_request.name_2.public_ip
-} */
+}
