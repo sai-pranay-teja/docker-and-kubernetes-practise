@@ -1,7 +1,4 @@
-provider "aws" {
-  region="us-east-1"
-  
-}
+
 
 resource "aws_eks_cluster" "example" {
   name     = "Cluster-1"
