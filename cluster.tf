@@ -24,7 +24,6 @@ resource "aws_eks_node_group" "example" {
   node_group_name = "example"
   node_role_arn   = aws_iam_role.example.arn
   version         = aws_eks_cluster.example.version
-  release_version = nonsensitive(data.aws_ssm_parameter.eks_ami_release_version.value)
   subnet_ids      = ["subnet-091b2024261b704f3","subnet-0be6942b77329114c"]
 
   scaling_config {
