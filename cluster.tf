@@ -22,7 +22,7 @@ resource "aws_eks_cluster" "example" {
 resource "aws_eks_node_group" "example" {
   cluster_name    = aws_eks_cluster.example.name
   node_group_name = "example"
-  node_role_arn   = aws_iam_role.example.arn
+  node_role_arn   = aws_iam_role.node-example.arn
   version         = aws_eks_cluster.example.version
   subnet_ids      = ["subnet-091b2024261b704f3","subnet-0be6942b77329114c"]
 

@@ -45,9 +45,7 @@ resource "aws_iam_instance_profile" "demo-profile" {
 
 
 
-data "aws_ssm_parameter" "eks_ami_release_version" {
-  name = "/aws/service/eks/optimized-ami/${aws_eks_cluster.example.version}/amazon-linux-2/recommended/release_version"
-}
+
 
 
 resource "aws_iam_role" "node-example" {
