@@ -1,4 +1,4 @@
-/* 
+
 
 resource "aws_spot_instance_request" "name_2" {
     ami           = "ami-0bb6af715826253bf"
@@ -7,7 +7,7 @@ resource "aws_spot_instance_request" "name_2" {
     instance_interruption_behavior = "stop"
     wait_for_fulfillment=true
     vpc_security_group_ids = ["sg-036e9bfb37a180657"]
-    iam_instance_profile = aws_iam_instance_profile.demo-profile.name
+    /* iam_instance_profile = aws_iam_instance_profile.demo-profile.name */
 
   
 
@@ -19,7 +19,7 @@ resource "aws_spot_instance_request" "name_2" {
     create = "10m"
     delete = "10m"
   }
-provisioner "remote-exec" {
+/* provisioner "remote-exec" {
   connection {
     host = aws_spot_instance_request.name_2.public_ip
     user = "centos"
@@ -35,7 +35,7 @@ provisioner "remote-exec" {
     
   ]
   
-}
+} */
 
 
 
@@ -46,4 +46,4 @@ output "public-ip"{
 }
 
 
- */
+
