@@ -25,7 +25,6 @@ resource "aws_eks_node_group" "example" {
   node_role_arn   = aws_iam_role.node-example.arn
   version         = aws_eks_cluster.example.version
   subnet_ids      = ["subnet-091b2024261b704f3","subnet-0be6942b77329114c"]
-  source_security_group_ids=["sg-036e9bfb37a180657"]
   scaling_config {
     desired_size = 1
     max_size     = 1
