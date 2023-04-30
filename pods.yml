@@ -9,7 +9,6 @@ spec:
       ports:
        - name: TCP
          containerPort: 80
-         port: 80
 
 
 # ---
