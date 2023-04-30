@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-1
+  labels:
+    app.kubernetes.io/name: proxy
 spec:
   containers:
     - name: nginx
@@ -18,7 +20,7 @@ metadata:
   name: pod-1
 spec:
   selector:
-    app.kubernetes.io/name: app-1
+    app.kubernetes.io/name: proxy
   ports:
     - protocol: TCP
       port: 80
