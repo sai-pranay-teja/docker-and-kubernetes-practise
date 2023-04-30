@@ -8,6 +8,8 @@ spec:
       image: 581798224530.dkr.ecr.us-east-1.amazonaws.com/nginx_practise
       ports:
         - containerPort: 80
+          hostPort: 80
+          
 
 
 # ---
