@@ -7,7 +7,8 @@ spec:
     - name: nginx
       image: 581798224530.dkr.ecr.us-east-1.amazonaws.com/nginx_practise
       ports:
-       - port: 80
+       - name: TCP
+         port: 80
          targetPort: 80
 
 
