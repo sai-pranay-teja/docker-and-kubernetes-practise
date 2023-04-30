@@ -10,3 +10,17 @@ spec:
       ports:
         - containerPort: 80
           hostPort: 55785
+
+
+---
+kind: Service 
+apiVersion: v1 
+metadata:
+  name: hostname-service 
+spec:
+  selector:
+    app.kubernetes.io/name: app-1
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
