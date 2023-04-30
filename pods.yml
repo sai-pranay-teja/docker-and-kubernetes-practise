@@ -1,9 +1,7 @@
-apiVersion: v2
+apiVersion: v1
 kind: Pod
 metadata:
   name: pod-1
-  labels:
-    app.kubernetes.io/name: proxy
 spec:
   containers:
     - name: nginx
