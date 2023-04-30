@@ -1,4 +1,4 @@
-/* resource "aws_instance" "demo-instance" {
+resource "aws_instance" "demo-instance" {
   ami = "ami-0bb6af715826253bf"
   instance_type = "t3a.small"
   vpc_security_group_ids = ["sg-036e9bfb37a180657"]
@@ -8,7 +8,7 @@
   }
 
 
-provisioner "remote-exec" {
+/* provisioner "remote-exec" {
   connection {
     host = aws_instance.demo-instance.public_ip
     user = "centos"
@@ -24,9 +24,9 @@ provisioner "remote-exec" {
     
   ]
   
-}
+} */
 }
 
 output "public-ip"{
   value = aws_instance.demo-instance.public_ip
-} */
+}
