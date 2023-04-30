@@ -9,7 +9,7 @@ spec:
     - name: nginx
       image: 581798224530.dkr.ecr.us-east-1.amazonaws.com/nginx_practise
       ports:
-      - containerPort: 80
+        - containerPort: 80
 
 
 
@@ -17,7 +17,7 @@ spec:
 kind: Service 
 apiVersion: v1 
 metadata:
-  name: pod-1
+  name: pod-service
 spec:
   selector:
     app.kubernetes.io/name: proxy
