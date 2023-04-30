@@ -1,4 +1,4 @@
-provider "aws" {
+/* provider "aws" {
   region = "us-east-1"
   
 }
@@ -76,4 +76,4 @@ resource "aws_iam_role_policy_attachment" "example-AmazonEKS_CNI_Policy" {
 resource "aws_iam_role_policy_attachment" "example-AmazonEC2ContainerRegistryReadOnly" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.node-example.name
-}
+} */
