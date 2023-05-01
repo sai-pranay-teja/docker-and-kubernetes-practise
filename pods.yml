@@ -16,6 +16,7 @@ kind: Service
 metadata:
   name: pod-1
 spec:
+  type: NodePort
   selector:
     component: pod-1
   ports:
