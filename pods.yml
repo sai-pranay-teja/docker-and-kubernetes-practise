@@ -14,11 +14,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: pod-1
+  name: {{ .Values.component }}
 spec:
   type: NodePort
   selector:
-    component: pod-1
+    component: {{ .Values.component }}
   ports:
     - port: 80
       targetPort: 80
