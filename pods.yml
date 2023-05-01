@@ -19,10 +19,11 @@ spec:
   selector:
     component: pod-1
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
-  type: LoadBalancer
+    - port: 80
+      targetPort: 80
+      # Optional field
+      # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: 30007
 
 
 # ---
