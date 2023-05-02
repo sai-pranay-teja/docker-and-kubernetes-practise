@@ -19,7 +19,7 @@ resource "aws_spot_instance_request" "name_2" {
     create = "10m"
     delete = "10m"
   }
-/* provisioner "remote-exec" {
+provisioner "remote-exec" {
   connection {
     host = aws_spot_instance_request.name_2.public_ip
     user = "centos"
@@ -35,7 +35,7 @@ resource "aws_spot_instance_request" "name_2" {
     
   ]
   
-} */
+}
 
 
 
