@@ -24,6 +24,7 @@ resource "aws_eks_node_group" "example" {
   node_group_name = "example"
   node_role_arn   = aws_iam_role.node-example.arn
   version         = aws_eks_cluster.example.version
+  capacity_type   = "SPOT"
   subnet_ids      = ["subnet-091b2024261b704f3","subnet-0be6942b77329114c"]
   scaling_config {
     desired_size = 1
